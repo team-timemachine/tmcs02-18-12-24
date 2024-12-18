@@ -1,0 +1,36 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background: radial-gradient(circle at center, #1a1a1a 0%, #000000 100%);
+}
+
+.ai-message {
+  font-family: 'Montserrat', sans-serif;
+  letter-spacing: -0.02em;
+  line-height: 1.2;
+}
+
+@keyframes pulse {
+  0% {
+    box-shadow: 0 0 0 0 rgba(147, 51, 234, 0.7);
+  }
+  70% {
+    box-shadow: 0 0 0 10px rgba(147, 51, 234, 0);
+  }
+  100% {
+    box-shadow: 0 0 0 0 rgba(147, 51, 234, 0);
+  }
+}
+
+.input-glow {
+  animation: pulse 2s infinite;
+}
+
+.drop-shadow-glow {
+  filter: drop-shadow(0 0 8px currentColor);
+}
